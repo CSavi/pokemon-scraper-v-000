@@ -18,8 +18,9 @@ class Pokemon
   #find pokemon in database by their id number
   #return new pokemon object
   def self.find(id, db)
-    binding.pry
+    #binding.pry
     pokemon_info = db.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
     Pokemon.new(pokemon_info)
+    binding.pry
   end
 end
