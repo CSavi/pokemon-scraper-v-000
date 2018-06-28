@@ -17,6 +17,6 @@ class Pokemon
   #find pokemon in database by their id number
   #return new pokemon object
   def find(id)
-    
+    db.execute("SELECT  ")
   end
 end
