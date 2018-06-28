@@ -1,3 +1,4 @@
+require 'pry'
 class Pokemon
 
   attr_accessor :name, :type, :db, :id
@@ -18,5 +19,6 @@ class Pokemon
   #return new pokemon object
   def find(id)
     db.execute("SELECT * FROM pokemon WHERE id = ?", id)
+    binding.pry
   end
 end
